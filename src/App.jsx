@@ -1,8 +1,12 @@
+import Home from "./pages/Home/Home";
+import Header from "./pages/Shared/Header";
+
 function App() {
   return (
-    <>
-      <h1>Hello L1 warriors..</h1>
-    </>
+    <div>
+  
+      <Home></Home>
+    </div>
   );
 }
 
