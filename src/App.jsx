@@ -1,11 +1,10 @@
-import Home from "./pages/Home/Home";
-import Header from "./pages/Shared/Header";
 
+import MainLayout from "./pages/Home/components/layout/MainLayout";
 function App() {
   return (
     <div>
   
-      <Home></Home>
+      <MainLayout></MainLayout>
     </div>
   );
 }
