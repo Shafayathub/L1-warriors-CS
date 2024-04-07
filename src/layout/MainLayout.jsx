@@ -1,18 +1,11 @@
-import { useState } from "react";
-import { ThemeContext } from "../context";
-import Home from "../pages/Home/Home";
+
 import Header from "../pages/Shared/Header";
-
+import { Outlet } from "react-router-dom";
 const MainLayout = () => {
-  const [darkMode, setDarkMode] = useState(true);
   return (
-    <div className={`${darkMode ? "dark":""}`}>
-      <ThemeContext.Provider  value={{ darkMode, setDarkMode }}>
+    <div >
       <Header />
-
-<Home></Home>
-      </ThemeContext.Provider>
-    
+      <Outlet/>
     </div>
   );
 };

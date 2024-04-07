@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
-
+import { Moon, Sun } from "lucide-react";
+import { useContext } from "react";
+import {  ThemeContext } from "../../context";
 const Header = () => {
+  const { darkMode, setDarkMode }= useContext(ThemeContext);
   return (
     <header className="font-semibold h-20 lg:sticky lg:top-0 z-10 bg-slate-800 text-yellow-400">
       <div className="container mx-auto flex p-3 flex-col md:flex-row items-center">
@@ -14,7 +17,20 @@ const Header = () => {
             <a href="#"> home </a>
             <a href="#"> home </a>
             <a href="#"> home </a>
+            <button
+              className="rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {/* <img
+                  src={darkMode ? sun : moon}
+                  width="24"
+                  height="24"
+                  alt=""
+                /> */}
+
+              {darkMode ? <Sun /> : <Moon />}
           
+            </button>
         </nav>
         {/* Showing User name and Photo */}
         <span className="mr-1">
