@@ -1,16 +1,12 @@
 // eslint-disable-next-line react/prop-types
-const ServiceCard = () => {
+const Card = ({ name, price, img }) => {
   return (
     <div className="w-80 border border-yellow-500 rounded-lg">
-      <img
-        className="w-full rounded-xl p-2"
-        src="https://i.ibb.co/3YJdzZ2/pexels-pixabay-236380.jpg"
-        alt=""
-      />
+      <img className="w-full rounded-xl p-2" src={img} alt="" />
 
       <div className="p-2 md:p-4">
-        <h3 className="text-xl font-semibold">Title</h3>
-        <h3 className="text-lg font-semibold"> price:$300</h3>
+        <h3 className="text-xl font-semibold">{name}</h3>
+        <h3 className="text-lg font-semibold"> price:${price}</h3>
         <p className="my-2 text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
           provident, totam ducimus distinctio quaerat debitis dolorum aliquid
@@ -27,4 +23,4 @@ const ServiceCard = () => {
   );
 };
 
-export default ServiceCard;
+export default Card;
