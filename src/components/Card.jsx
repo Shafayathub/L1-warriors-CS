@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 const Card = ({ name, price, img, description }) => {
   return (
-    <div className="w-80 border border-yellow-500 rounded-lg">
+    <div className="w-80 border border-yellow-500 rounded-lg relative">
       <img className="w-full rounded-xl p-2" src={img} alt="" />
 
       <div className="p-2 md:p-4">
@@ -10,7 +10,7 @@ const Card = ({ name, price, img, description }) => {
         <p className="my-2 text-justify">{description}</p>
         <button
           onClick={() => console.log("clicked service card")}
-          className="w-full p-2 bg-yellow-500 rounded-md border-2 hover:bg-yellow-600 text-white font-medium"
+          className="mt-3 w-full p-2 bg-yellow-500 rounded-md border-2 hover:bg-yellow-600 text-white font-medium absolute bottom-0 left-0"
         >
           Book Appointment
         </button>
