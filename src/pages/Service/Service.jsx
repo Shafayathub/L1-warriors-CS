@@ -15,6 +15,7 @@ export default function Service() {
             name={service?.name}
             price={service?.price}
             img={service.img}
+            description={service?.description}
           ></Card>
         ))}
       </div>
